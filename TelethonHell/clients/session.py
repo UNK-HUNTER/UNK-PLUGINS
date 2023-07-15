@@ -12,7 +12,7 @@ def validate_session(session):
         new_session = session[6:-5]
         return str(new_session)
     else:
-        print(f"HELLBOT SESSION - Wrong session string!")
+        print(f"UNK USERBOT SESSION - Wrong session string!")
         sys.exit()
 
 
@@ -31,7 +31,7 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    print(f"HELLBOT_SESSION - {e}")
+    print(f"UNK_USERBOT_SESSION - {e}")
     sys.exit()
 
 
