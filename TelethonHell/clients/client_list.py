@@ -48,20 +48,20 @@ async def clients_list():
 async def client_id(event, botid=None, is_html=None):
     if botid is not None:
         uid = await event.client(GetFullUserRequest(botid))
-        ForGo10God = uid.users[0].id
+        UNK_HUNTERX = uid.users[0].id
         HELL_USER = uid.users[0].first_name
-        _mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
-        _html = f"<a href='tg://user?id={ForGo10God}'>{HELL_USER}</a>"
+        _mention = f"[{HELL_USER}](tg://user?id={UNK_HUNTERX})"
+        _html = f"<a href='tg://user?id={UNK_HUNTERX}'>{HELL_USER}</a>"
         hell_mention = _html if is_html else _mention
     else:
         client = await event.client.get_me()
         uid = get_peer_id(client)
-        ForGo10God = uid
+        UNK_HUNTERX = uid
         HELL_USER = client.first_name
-        _mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
-        _html = f"<a href='tg://user?id={ForGo10God}'>{HELL_USER}</a>"
+        _mention = f"[{HELL_USER}](tg://user?id={UNK_HUNTERX})"
+        _html = f"<a href='tg://user?id={UNK_HUNTERX}'>{HELL_USER}</a>"
         hell_mention = _html if is_html else _mention
-    return ForGo10God, HELL_USER, hell_mention
+    return UNK_HUNTERX, HELL_USER, hell_mention
 
 
 async def get_user_id(event, ids):
